@@ -5,4 +5,3 @@ resource "aws_iam_user" "test_user" {
 resource "aws_iam_access_key" "test_user_keys" {
   user = "${aws_iam_user.test_user.name}"
 }
-

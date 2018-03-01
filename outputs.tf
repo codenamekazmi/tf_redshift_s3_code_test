@@ -27,7 +27,7 @@ output "user_arn" {
 }
 
 output "user_name" {
-  value = "${tf_redshift_test.test_user.name}" 
+  value = "${tf_redshift_test.test_user.name}"
 }
 
 output "bucket_arn" {
