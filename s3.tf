@@ -28,5 +28,5 @@ resource "aws_s3_bucket_policy" "test_user_bucket_policy" {
       ]
     }
   ]
-}
+} EOF
 }
