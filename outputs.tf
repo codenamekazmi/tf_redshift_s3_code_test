@@ -1,17 +1,17 @@
 output "redshift_cluster_id" {
-  value = "${tf_redshift_test.main_redshift_cluster.id}"
+  value = "${aws_redshift_cluster.main_redshift_cluster.id}"
 }
 
 output "redshift_cluster_address" {
-  value = "${replace(tf_redshift_test.main_redshift_cluster.endpoint, format(":%s", tf_redshift_test.main_redshift_cluster.port), "")}"
+  value = "${replace(aws_redshift_cluster.main_redshift_cluster.endpoint, format(":%s", aws_redshift_cluster.main_redshift_cluster.port), "")}"
 }
 
 output "redshift_cluster_endpoint" {
-  value = "${tf_redshift_test.main_redshift_cluster.endpoint}"
+  value = "${aws_redshift_cluster.main_redshift_cluster.endpoint}"
 }
 
 output "redshift_cluster_hosted_zone_id" {
-  value = "${tf_redshift_test.main_redshift_cluster.hosted_zone_id}"
+  value = "${aws_redshift_cluster.main_redshift_cluster.hosted_zone_id}"
 }
 
 output "subnet_group_id" {
@@ -23,19 +23,19 @@ output "security_group_id" {
 }
 
 output "user_arn" {
-  value = "${tf_redshift_test.test_user.arn}"
+  value = "${aws_iam_user.test_user.arn}"
 }
 
 output "user_name" {
-  value = "${tf_redshift_test.test_user.name}"
+  value = "${aws_iam_user.test_user.name}"
 }
 
 output "bucket_arn" {
-  value = "${tf_redshift_test.test_bucket.arn}"
+  value = "${aws_s3_bucket.test_bucket.arn}"
 }
 
 output "bucket_name" {
-  value = "${tf_redshift_test.test_bucket.id}"
+  value = "${aws_s3_bucket.test_bucket.id}"
 }
 
 output "iam_access_key_id" {

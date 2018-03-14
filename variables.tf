@@ -79,26 +79,10 @@ variable "wlm_json_configuration" {
   default = "[{\"query_concurrency\": 5}]"
 }
 
-output "user_arn" {
-  value = "${aws_iam_user.test_user.arn}"
-}
-
-output "user_name" {
-  value = "${aws_iam_user.test_user.name}"
-}
-
-output "bucket_arn" {
-  value = "${aws_s3_bucket.test_bucket.arn}"
-}
-
-output "bucket_name" {
-  value = "${aws_s3_bucket.test_bucket.id}"
-}
-
-output "iam_access_key_id" {
-  value = "${aws_iam_access_key.test_user_keys.id}"
-}
-
-output "iam_access_key_secret" {
-  value = "${aws_iam_access_key.test_user_keys.secret}"
-}
+variable "iam_user" {}
+variable "bucket_name" {}
+variable "default_tags" {}
+variable "kms_key_id" {}
+variable "encrypted" {}
+variable "vpc_id" {}
+variable "env" {}
