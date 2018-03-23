@@ -19,7 +19,7 @@ resource "aws_redshift_cluster" "main_redshift_cluster" {
   automated_snapshot_retention_period = "${var.automated_snapshot_retention_period }"
   preferred_maintenance_window        = "${var.preferred_maintenance_window}"
 
-  iam_roles = ["${var.cluster_iam_roles}"]
+  iam_roles = ["${aws_iam_role.test.arn}"]
 
   lifecycle {
     prevent_destroy = true
